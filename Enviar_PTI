@@ -1,0 +1,116 @@
+public class Ponto {
+
+private int x;
+private int y;
+
+
+public Ponto() {
+	
+	this.x=0;
+	this.y=0;
+	
+}
+	
+public Ponto (int x, int y ){
+	
+	 this.x = x;
+	  this.y = y;
+}
+
+
+
+public int getX(){
+
+	return this.x;
+	
+	}
+
+public void setX(int x) {
+	
+	this.x = x;
+	
+}
+	
+public int getY(){
+
+	
+	return this.y;
+
+}
+
+public void setY(int y) {
+	
+	this.y = y;
+	
+}
+public boolean verificarIgualdade (int x, int y) {
+	
+	
+	
+	System.out.println("X =" + x + " e y = " + y);
+	
+	if (this.x != x && this.y != y ) {
+		
+		System.out.println("Ponto A e o Ponto B não são iguais!");
+		
+		return false;
+	}
+	
+	System.out.println("Ponto A e o Ponto B são iguais!");
+	return true;
+}
+
+public  boolean  verificarOutraIgualdade (int x, int y) {
+	
+
+	
+	System.out.println("X =" + x + " e y = " + y);
+	
+	if (this.x != x && this.y != y ) {
+		
+		System.out.println("Ponto A e o Ponto B não são iguais!");
+		
+		return false;
+	}
+	
+	System.out.println("Ponto A e o Ponto B são iguais!");
+	return true;
+	
+}
+
+public double calcularDistanciaPontos(double x1,double x2, double y1, double y2) {
+	
+	double resultado = Math.sqrt(Math.pow(x1- x2,2)+ Math.pow(y1- y2,2));
+	
+	System.out.println("A distancia entre os pontos A  e B são : " + resultado);
+	
+	return resultado;
+}
+	
+}
+public class TestaPonto {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Ponto pontoA = new Ponto(5,10);
+		
+		Ponto pontoB = new Ponto(6,3);
+		
+		
+		System.out.println(" X = " + pontoA.getX ( ) +  " Y " + pontoA.getY ());
+		System.out.println(" X = " + pontoB.getX ( ) +  " Y " + pontoB.getY ());
+		System.out.println("----------------------------------------------");
+		
+		
+		pontoA.verificarIgualdade(5,10);
+		pontoB.verificarOutraIgualdade(8,18);
+		
+		double retorno = pontoA.calcularDistanciaPontos(5, 6,10, 3);
+		
+		
+	}
+
+}
+
